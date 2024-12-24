@@ -1,0 +1,24 @@
+@media (max-width:360px){
+    .rooms .room-card-title{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:1441px){
+    .rooms .room-card-image{
+        height: 400px !important;
+    }
+}
+@media (max-width:1400px){
+    .rooms .listing{
+        gap: 20px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1203px){
+    .rooms .listing{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+}
+

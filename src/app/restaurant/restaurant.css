@@ -1,0 +1,51 @@
+.gradient-btn {
+    color: #fff;
+    border: 2px solid #b9813a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #b9813a;
+}
+
+@media (max-width:1300px) {
+    .menu-container{
+        width: 90%;
+    }
+    .menu-container .image-container{
+        width: 36%;
+    }
+    .menu-container .image-container .border-image{
+        padding: 20px;
+        width: 281px;
+        height: 400px;
+    }
+    .menu-container .image-container .image{
+        width: 100%;
+        margin: auto;
+    }
+    .menu-container .card-headding{
+        font-size: 26px;
+    }
+    .menu-container .card-description{
+        font-size: 12px;
+        width: 500px;
+    }
+}
+
+@media (max-width:1023px){
+    .menu-container .image-container{
+        display: none;
+    }
+}
+
+@media (max-width:666px){
+    .menu-container .card-description{
+        font-size: 12px;
+        width: auto;
+    }
+    .menu-container .card-headding{
+        font-size: 22px;
+        line-height: 24px;
+
+    }
+}   

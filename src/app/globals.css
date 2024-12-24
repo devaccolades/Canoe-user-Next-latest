@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Roboto font */
+
+@font-face {
+  font-family: "Roboto-font-regular"; /* 400  regular Roboto */
+  src: url("../.././public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Roboto-font-medium"; /* 500  medium Roboto */
+    src: url("../.././public/fonts/Roboto-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto-font-Bold"; /* 700  medium Roboto */
+    src: url("../.././public/fonts/Roboto-Bold.ttf") format("truetype");
+  }
+  
+  
+
+/* Melodrama or Newyork */
+
+@font-face {
+  font-family: "Melodrama-regular"; /* 400  regular Melodrama */
+  src: url("../.././public/fonts/Melodrama-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Melodrama-Medium"; /* 500  regular Mediaum */
+  src: url("../.././public/fonts/Melodrama-Medium.woff") format("truetype");
+}
+@font-face {
+  font-family: "Melodrama-semibold"; /* 600  regular Melodrama */
+  src: url("../.././public/fonts/Melodrama-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Melodrama-bold"; /* 700  regular Melodrama */
+  src: url("../.././public/fonts/Melodrama-Bold.ttf") format("truetype");
+}
+
+
+
+
+
+
+/* Cavet */
+
+@font-face {
+  font-family: "cavet-regular"; /* 400  Cavet */
+  src: url("../.././public/fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cavet-Bold"; /* 700  Cavet */
+  src: url("../.././public/fonts/Caveat-Bold.ttf") format("truetype");
+}
+
+/* Grotesk */
+
+@font-face {
+  font-family: "space-grotesk-semibold"; /* 600  Cavet */
+  src: url("../.././public/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+}
+
+/* Epilogue-Regular */
+
+@font-face {
+  font-family: "Epilogue-Regular"; /* 400  Cavet */
+  src: url("../.././public/fonts/Epilogue-Regular.ttf") format("truetype");
+}
+
+
+
+
+
+
+
+:root {
+  --primary-cl: #0B2639;
+  --secondary-cl: linear-gradient(180deg, #cb964e 0%, #b9813a 100%);
+  --third-cl: rgba(255, 255, 255, 1);
+}
+
+/* responsive containers */
+
+.containers {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .containers {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .containers {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .containers {
+    width: 90%;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #cb964e !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #cb964e !important;
+}
+
+/* Hide navigation arrows on mobile */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

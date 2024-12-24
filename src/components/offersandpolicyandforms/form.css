@@ -1,0 +1,40 @@
+/* Form */
+
+@media (max-width:365px){
+    .form {
+        padding-bottom: 30px;
+    }
+    .form .submit-container{
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 10px;
+    }
+}
+
+
+.form-control {
+    width: 100% !important;
+    border: none !important;
+    background-color: #F6F6F6 !important;
+    height: 42px !important;
+    border-radius: 12px !important;
+}
+
+.flag-dropdown {
+    border: none !important;
+    background-color: #F6F6F6 !important;
+    height: 42px !important;
+    border-radius: 12px !important;
+}
+
+.selected-flag {
+    background-color: #F6F6F6 !important;
+    border-radius: 12px !important;
+}
+
+/* Offfer */
+@media (min-width:1441px) {
+    .offer .description {
+        width: 80%;
+    }
+}

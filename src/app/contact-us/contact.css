@@ -1,0 +1,40 @@
+@media (min-width:1441px) {
+    .contact-info .iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width:490px) {
+    .distance-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .contact .text-container {
+        gap: 0px;
+        text-align: center;
+    }
+}
+
+@media (max-width:340px) {
+    .contact .heading {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+
+/* address */
+@media (max-width:565px){
+    .address-contanier .addres{
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media (min-width:1441px){
+    .custom-gap{
+        gap: 100px;
+    }
+}

@@ -1,0 +1,36 @@
+
+/* LandingPage */
+.landing-bg {
+    background-image: linear-gradient(180deg, #0B2639 6.5%, rgba(11, 38, 57, 0) 36%), 
+                      url('../../../public/images/home/Landing.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width:491px) and (max-width:767px){
+    .landing{
+        padding-bottom: 30px;
+    }
+}
+@media (max-width:490px){
+    .landing-bg {
+        background-position: 45%;
+    }
+    .amenity .lising{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .custom-container{
+        width: 80%;
+    }
+    
+}
+
+@media (max-width:340px){
+    .landing{
+        padding-bottom: 0px;
+    }
+    .landing .heading{
+        font-size: 36px;
+        line-height: 42px;
+    }
+}

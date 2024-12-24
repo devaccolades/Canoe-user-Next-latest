@@ -1,0 +1,17 @@
+/* Landing */
+
+/* Info */
+.line-draw-animation {
+    animation: lineDraw 1.5s ease forwards;
+    transform-origin: top;
+}
+
+@keyframes lineDraw {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}

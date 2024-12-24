@@ -1,0 +1,66 @@
+/* Dynamic Carousel */
+
+@media (max-width:1439px){
+    .DynamicCarousel {
+        height: 350px;
+    }
+    .cards{
+        width: 500px;
+        height: 350px;
+    }
+}
+
+@media (max-width:767px){
+    .cards {
+        width: 300px;
+    }
+}
+
+@media (max-width:489px){
+    .DynamicCarousel {
+        height: 180px;
+    }
+    .cards{
+        width: 240px;
+        height: 180px;
+    }
+}
+
+/* StaggeredCarousel */
+
+@media (max-width:1440px){
+    .section .swiper-slide-active{
+        width: 700px !important;
+    }
+    
+}
+
+@media (max-width:1300px){
+    .section .swiper-slide-active{
+        width: 600px !important;
+        height: 450px;
+    }
+    .section .swiper-container {
+        width: 40%;
+    
+    }
+}
+
+@media (max-width:1320px){
+    .StaggeredCarousel .custom-height{
+        height: 240px;
+    }
+}
+
+@media (max-width:1023px){
+    .StaggeredCarousel .custom-height{
+        height: 200px;
+    }
+}
+
+@media (max-width:490px){
+    .StaggeredCarousel .custom-height{
+        height: 120px;
+    }
+}
+

@@ -1,0 +1,25 @@
+.nearbyplace-bg {
+    background-image: linear-gradient(180deg, #0B2639 6.5%, rgba(11, 38, 57, 0) 36%), 
+                      url('../../../public/images/home/Landing.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width:490px) and (max-width:767px){
+    .nearby-placess{
+        padding-bottom: 60px;
+    }
+}
+@media (max-width:490px){
+    .nearbyplace-bg {
+        background-position: 45%;
+    }
+    
+}
+
+@media (max-width:340px){
+    .nearby-placess .heading{
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
