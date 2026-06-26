@@ -1,0 +1,39 @@
+
+> canoe@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./public/video/edit.mp4
+Unknown module type
+This module doesn't have an associated type. Use a known file extension, or register a loader for it.
+
+Read more: https://nextjs.org/docs/app/api-reference/next-config-js/turbo#webpack-loaders
+
+
+./src/app/(home)/Landing.jsx:5:1
+Module not found: Can't resolve '../../../public/images/home/rooms.jpg'
+  [90m3 |[0m [36mimport[0m [33mReact[0m, { useState, useEffect } [36mfrom[0m [32m'react'[0m;
+  [90m4 |[0m [36mimport[0m dynamic [36mfrom[0m [32m'next/dynamic'[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m first [36mfrom[0m [32m'../../../public/images/home/rooms.jpg'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m two [36mfrom[0m [32m'../../../public/images/home/2.jpeg'[0m;
+  [90m7 |[0m [36mimport[0m three [36mfrom[0m [32m'../../../public/images/home/offers.jpg'[0m;
+  [90m8 |[0m [36mimport[0m fourth [36mfrom[0m [32m'../../../public/images/home/4.jpeg'[0m;
+
+
+
+Import trace:
+  Server Component:
+    ./src/app/(home)/Landing.jsx
+    ./src/app/page.jsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/(home)/Landing.jsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

@@ -9,7 +9,7 @@ import fourth from '../../../public/images/home/4.jpeg';
 import fifth from '../../../public/images/home/5.jpeg';
 import sixth from '../../../public/images/home/review.jpg';
 import { useRouter } from 'next/navigation';
-import { Fade } from 'react-reveal';
+import { motion } from 'framer-motion';
 import Info from './Info';
 
 const StaggeredCarousel = dynamic(() => import('@/components/carousel/StaggeredCarousel'), { 
@@ -48,47 +48,60 @@ function Landing() {
 
             <div className='bg-[--primary-cl] relative main-section z-0 md:pb-[60px] landing'>
                 <div className='flex justify-center text-center flex-col items-center pt-[40px] md:pt-[95px]'>
-                    <Fade bottom delay={100}>
-                        <p className="text-[16px] md:text-[20px] lg:text-[24px] font-[cavet-regular] leading-[24px] pb-[8px] md:pb-[12px] text-[--third-cl] z-10">
-                            Why Choose Us
-                        </p>
-                    </Fade>
-                    <Fade bottom delay={200}>
-                        <h1
-                            className="heading text-[48px] lg:text-[60px] font-[Melodrama-regular] leading-[48px] md:leading-[69px] mb-[8px] z-10"
-                            style={{
-                                background: 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                letterSpacing: '2px'
-                            }}
-                        >
-                            Business Class Hotel
-                        </h1>
-                    </Fade>
-                    <Fade bottom delay={300}>
-                        <p className="text-[12px] lg:text-[14px] font-[Roboto-font-medium] leading-[18px] md:leading-[21px] text-[--third-cl] mb-[10px] w-[80%] md:w-[70%] lg:w-[630px] z-10">
-                            with 34 well designed and spacious rooms for all kind of travellers coming to Kannur.
-                            The hotel is also having a facility of Multi-Cuisine Restaurant, fitness Centre, Swimming Pool.
-                        </p>
-                    </Fade>
-                    <Fade bottom delay={400}>
-                        <p className="text-[12px] lg:text-[14px] font-[Roboto-font-regular] leading-[18px] md:leading-[21px] text-[--third-cl] mb-[24px] w-[80%] md:w-[70%] lg:w-[630px] z-10">
-                            Just a stone's throw from Kannur Railway Station, our hotel is tailored to meet the needs
-                            of business travelers seeking exceptional value.
-                        </p>
-                    </Fade>
-                    <Fade bottom delay={500}>
-                        <button 
-                            onClick={() => router.push('/about-us')} 
-                            className='p-[10px] text-[14px] rounded-[4px] text-[--third-cl] font-[Roboto-font-medium] z-10 transition-colors duration-150 ease-out'
-                            style={{ background: 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)' }}
-                            onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(180deg, #e0aa4e 0%, #d4953a 100%)'}
-                            onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)'}
-                        >
-                            About the Hotel
-                        </button>
-                    </Fade>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="text-[16px] md:text-[20px] lg:text-[24px] font-[cavet-regular] leading-[24px] pb-[8px] md:pb-[12px] text-[--third-cl] z-10">
+                        Why Choose Us
+                    </motion.p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="heading text-[48px] lg:text-[60px] font-[Melodrama-regular] leading-[48px] md:leading-[69px] mb-[8px] z-10"
+                        style={{
+                            background: 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            letterSpacing: '2px'
+                        }}
+                    >
+                        Business Class Hotel
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="text-[12px] lg:text-[14px] font-[Roboto-font-medium] leading-[18px] md:leading-[21px] text-[--third-cl] mb-[10px] w-[80%] md:w-[70%] lg:w-[630px] z-10">
+                        with 34 well designed and spacious rooms for all kind of travellers coming to Kannur.
+                        The hotel is also having a facility of Multi-Cuisine Restaurant, fitness Centre, Swimming Pool.
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="text-[12px] lg:text-[14px] font-[Roboto-font-regular] leading-[18px] md:leading-[21px] text-[--third-cl] mb-[24px] w-[80%] md:w-[70%] lg:w-[630px] z-10">
+                        Just a stone's throw from Kannur Railway Station, our hotel is tailored to meet the needs
+                        of business travelers seeking exceptional value.
+                    </motion.p>
+                    <motion.button 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                        onClick={() => router.push('/about-us')} 
+                        className='p-[10px] text-[14px] rounded-[4px] text-[--third-cl] font-[Roboto-font-medium] z-10 transition-colors duration-150 ease-out'
+                        style={{ background: 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)' }}
+                        onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(180deg, #e0aa4e 0%, #d4953a 100%)'}
+                        onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(180deg, #cb964e 0%, #b9813a 100%)'}
+                    >
+                        About the Hotel
+                    </motion.button>
                 </div>
          
                 <div className='containers -mt-[10px] relative z-[2] pt-[60px] pb-[60px] md:pt-[80px] md:pb-[0px]'> 

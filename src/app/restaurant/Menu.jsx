@@ -10,7 +10,7 @@ import DessertsImage from "../../../public/images/restaurant/Desserts.jpg";
 import BreakfastImage from "../../../public/images/restaurant/Breakfast.jpg";
 import LunchImage from "../../../public/images/restaurant/Lunch.jpg";
 import DinnerImage from "../../../public/images/restaurant/Dinner.jpg";
-import { Fade } from "react-reveal";
+import { motion } from "framer-motion";
 function Menu() {
   const [selectedMenu, setSelectedMenu] = useState("Main Courses");
   const [selectedMenuItems, setSelectedMenuItems] = useState([]);
@@ -201,24 +201,31 @@ function Menu() {
         <>
             <section className=' bg-[--primary-cl] pb-[60px]'>
                 <div className='menu-container containers'>
-                <Fade bottom>
-                    <h4
-                        className="text-[32px] font-[Melodrama-Medium] leading-[34px]"
-                        style={gradientTextStyle}>
-                        Menu
-                    </h4>
-                    </Fade>
+                <motion.h4
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-[32px] font-[Melodrama-Medium] leading-[34px]"
+                    style={gradientTextStyle}>
+                    Menu
+                </motion.h4>
                     <div className='flex gap-[10px] flex-row flex-wrap py-[30px]'>
                         {/* Category Buttons */}
                         <div className="flex flex-wrap  gap-[10px] mb-8">
                             {category.map((item, index) => (
-                              <Fade bottom delay={(index + 1) * 100}>
+                              <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                                    key={index}
+                              >
                                <Category
                                     data={item}
-                                    key={index}
                                     selectedMenu={selectedMenu}
                                     setSelectedMenu={setSelectedMenu} />
-                              </Fade>
+                              </motion.div>
                                
                             ))}
                         </div>
@@ -227,8 +234,11 @@ function Menu() {
                         {selectedMenuItems?.items?.slice(0, Math.ceil(selectedMenuItems?.items?.length / 5)).map((item, index) => (
                             <div className={`flex ${index % 2 == 0 ? "flex-row" : "lg:flex-row-reverse"}`} key={index}>
                                 <div className={`image-container lg:w-[40%] flex ${index % 2 == 0 ? "justify-start" : "justify-end"}`}>
-                                <Fade bottom>
-                                    <div
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5 }}
                                         className='border-image h-[502px] w-[353px] bg-cover bg-center p-[40px]'
                                         style={{
                                             backgroundImage: `url(${imageDecoration.src})`,
@@ -239,14 +249,19 @@ function Menu() {
                                             className='image h-full w-full bg-cover bg-center rounded-[192px]'
                                             style={{ objectFit: "cover" }}
                                         />
-                                    </div>
-                                    </Fade>
+                                    </motion.div>
                                 </div>
                                 <div className="flex flex-col gap-[30px] lg:gap-[20px] w-full lg:w-[60%] justify-center">
                                     {selectedMenuItems?.items?.slice(index * 5, (index + 1) * 5).map((subItem, subIndex) => (
-                                        <Fade bottom delay={(index + 1) * 100}>
-                                        <MenuCard data={subItem} key={subIndex} />
-                                        </Fade>
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                                            key={subIndex}
+                                        >
+                                            <MenuCard data={subItem} />
+                                        </motion.div>
                                     ))}
                                 </div>
                             </div>

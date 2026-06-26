@@ -2,11 +2,12 @@
 const nextConfig = {
     reactStrictMode:false,
     images: {
-      domains: [
-        'localhost', 
-        '127.0.0.1', 
+      remotePatterns: [
+        { protocol: 'http', hostname: 'localhost' },
+        { protocol: 'http', hostname: '127.0.0.1' },
       ],
     },
+    turbopack: {},
     webpack: (config) => {
       config.module.rules.push({
         test: /\.(mp4|webm)$/,

@@ -125,13 +125,12 @@ function Header({ bgColor = "--primary-cl", textColor = "--third-cl", transparen
               ))}
               <li className='inline-block'>
          
-<Link href='/contact-us'>
-  <motion.button 
-    className='text-[14px] border-[1px] border-gradient-to-b from-[#CB964E] to-[#B9813A] text-[#B9813A] rounded-[4px] p-[10px] bg-transparent cursor-pointer transition-colors duration-150 ease-out hover:bg-[#B9813A] hover:border-[#B9813A] hover:text-white'
-    style={{ border: '1px solid #B9813A' }}
-  >
-    Contact Us
-  </motion.button>
+<Link 
+  href='/contact-us'
+  className='text-[14px] border-[1px] border-gradient-to-b from-[#CB964E] to-[#B9813A] text-[#B9813A] rounded-[4px] p-[10px] bg-transparent cursor-pointer transition-colors duration-150 ease-out hover:bg-[#B9813A] hover:border-[#B9813A] hover:text-white block'
+  style={{ border: '1px solid #B9813A' }}
+>
+  Contact Us
 </Link>
 
               
